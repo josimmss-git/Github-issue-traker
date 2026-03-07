@@ -5,10 +5,57 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      font-family: "Geist", sans-serif;
+    }
+  </style>
+
+
 </head>
 
 <body>
-  wellcome to my homepage;
+  <header>
+    <nav>
+      <div class="navbar bg-base-100 shadow-sm flex justify-between">
+        <div class="flex">
+          <div class=""><img class="w-9" src="./assets/github-logo.png" alt=""></div>
+          <p class="text-[#1F2937] font-semibold text-[24px]">GitHub Issues Tracker</p>
+        </div>
+
+        <div class="flex gap-2">
+          <input type="text" placeholder="Search..." class="border p-2 rounded">
+          <button class="bg-blue-500 text-white px-4 py-2 rounded ">
+            + New Issue
+          </button>
+        </div>
+
+
+      </div>
+
+    </nav>
+
+    <section class="w-9/12 mx-auto m-8">
+      <div class="navbar bg-base-300 rounded-2xl gap-2">
+        <button class="btn btn-ghost text-xl bg-blue-600 px-10">All</button>
+        <button class="btn btn-ghost text-xl px-10 ">Open</button>
+        <button class="btn btn-ghost text-xl px-10 ">Close</button>
+      </div>
+    </section>
+
+
+
+
+
+  </header>
 </body>
 
 </html>

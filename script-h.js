@@ -3,8 +3,10 @@
 
 
 const allBtn = document.getElementById("allBtn");
+const openBtn = document.getElementById("openBtn")
 
 const treesContainer = document.getElementById("card-container");
+const openContainer = document.getElementById("open-container");
 treesContainer.innerHTML = "";
 
  async function loadTrees() {
@@ -13,7 +15,7 @@ treesContainer.innerHTML = "";
    displayTrees(data.data);
 }
 
- async function loadDetails(id) {
+ async function loadBtn() {
    const res = await fetch("https://phi-lab-server.vercel.app/api/v1/lab/issue/{id}");
    const data = await res.json();
    showdetails(data.data);
@@ -58,13 +60,7 @@ function displayTrees(trees) {
           <p>${tree.author}</p>
           <p>${tree.createdAt}</p>
 
-          
-          
-
-
-     
-    
-
+         
         </div> 
 `;
     

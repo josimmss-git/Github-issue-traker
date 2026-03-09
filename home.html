@@ -42,20 +42,67 @@
       </div>
 
     </nav>
+  </header>
 
+  <main>
     <section class="w-9/12 mx-auto m-8">
       <div class="navbar bg-base-300 rounded-2xl gap-2">
-        <button class="btn btn-ghost text-xl bg-blue-600 px-10">All</button>
-        <button class="btn btn-ghost text-xl px-10 ">Open</button>
-        <button class="btn btn-ghost text-xl px-10 ">Close</button>
+        <button id="all" class="btn btn-ghost text-xl bg-blue-600 px-10">All</button>
+
+
+
+        <button id="openBtn" class="btn btn-ghost text-xl px-10 ">Open</button>
+
+
+        <button id="closeBtn" class="btn btn-ghost text-xl px-10 ">Close</button>
       </div>
     </section>
 
 
+    <section class="flex min-w-28 bg-white rounded-2xl px-6 py-5 shadow-sm w-9/12 mx-auto">
+
+      <div>
+        <img class="bg-[#4800ff41] rounded-4xl p-2" src="./assets/Aperture.png" alt="">
+      </div>
+
+      <div class="flex flex-wrap gap-4 mb-6">
+        <div>
+          <p id="count-issues" class="text-[20px] text-[#1F2937] font-semibold">0 Issues</p>
+          <p class="font-syne" id="stat-total">Track and manage your project issues
+          </p>
+        </div>
 
 
 
-  </header>
+    </section>
+
+
+    <section class="bg-base-100 w-9/12 mx-auto ">
+      <div id="card-container" class="card grid grid-cols-4 gap-4 shadow sm">
+
+
+
+
+        <!-- <div class="card-body">
+          <h2 class="card-title">Card title!</h2>
+          <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+
+        </div> -->
+
+
+      </div>
+
+
+    </section>
+
+  </main>
+
+
+
+
+
+
+  <script src="./script-h.js"></script>
 </body>
 
 </html>

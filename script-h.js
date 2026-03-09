@@ -3,10 +3,10 @@
 
 
 const allBtn = document.getElementById("allBtn");
-const openBtn = document.getElementById("openBtn")
+
 
 const treesContainer = document.getElementById("card-container");
-const openContainer = document.getElementById("open-container");
+
 treesContainer.innerHTML = "";
 
  async function loadTrees() {
@@ -15,16 +15,16 @@ treesContainer.innerHTML = "";
    displayTrees(data.data);
 }
 
- async function loadBtn() {
+ async function loadDetails() {
    const res = await fetch("https://phi-lab-server.vercel.app/api/v1/lab/issue/{id}");
    const data = await res.json();
-   showdetails(data.data);
+   detailsContainer(data.data);
 }
 
-function showDetails(tree) {
-
-  const detailsContainer = document.getElementById("details-container");
+function detailsContainer(details) {
+ 
 }
+
 
 function displayTrees(trees) {
   console.log(trees);
@@ -35,9 +35,6 @@ function displayTrees(trees) {
      card.className = "card white shadow-sm gap-4 p-4";
        const countElement = document.getElementById("card-count");
        
-
-
-  
 
 
       countElement.innerText = trees.length;
@@ -64,7 +61,7 @@ function displayTrees(trees) {
         </div> 
 `;
     
-       card.onclick = () => loadDetails(tree.id);
+        card.onclick = () => loadDetails(tree.id);
     treesContainer.appendChild(card);
        
   });

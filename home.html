@@ -34,7 +34,7 @@
         <div class="flex gap-2">
           <input type="text" placeholder="Search..." class="border p-2 rounded">
           <button class="bg-blue-500 text-white px-4 py-2 rounded ">
-            + New Issue
+            Search
           </button>
         </div>
 
@@ -47,7 +47,7 @@
   <main>
     <section class="w-9/12 mx-auto m-8">
       <div class="navbar bg-base-300 rounded-2xl gap-2">
-        <button id="all" class="btn btn-ghost text-xl bg-blue-600 px-10">All</button>
+        <button onclick="loadTrees()" id="allBtn" class="btn btn-ghost text-xl bg-blue-600 px-10">All</button>
 
 
 
@@ -67,7 +67,9 @@
 
       <div class="flex flex-wrap gap-4 mb-6">
         <div>
-          <p id="count-issues" class="text-[20px] text-[#1F2937] font-semibold">0 Issues</p>
+
+          <p id="count-issues" class="text-[20px] text-[#1F2937] font-semibold"><span id="card-count">0</span> Issues
+          </p>
           <p class="font-syne" id="stat-total">Track and manage your project issues
           </p>
         </div>
@@ -94,6 +96,10 @@
 
 
     </section>
+
+    <div id="card-container" class="grid grid-cols-3 gap-4"></div>
+
+    <div id="details-container" class="mt-6 p-4 border rounded"></div>
 
   </main>
 

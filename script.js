@@ -1,34 +1,23 @@
-document.getElementById("login-btn").addEventListener("click", function () {
-  const userNume = document.getElementById("input-user");
-  const contactName = userNume.value;
-  console.log(contactName);
+const inputUsername = document.getElementById('username')
+const inputPassword = document.getElementById('password')
 
-  const userPin = document.getElementById("input-pin");
-  const pin = userPin.value;
-  console.log(pin);
+const login = (username, password) => {
+    if (username.value === 'admin' && password.value === 'admin123') {
+        window.location.assign('home.html')
+    }
+    else {
+        alert("Username or Password is not correct")
+        return
+    }
+    inputUsername.value = ''
+    inputPassword.value = ''
+}
 
-  if (contactName == "admin" && pin == "admin123") {
-    alert("login Successful");
+document.getElementById('login-btn').addEventListener('click', () => login(inputUsername, inputPassword))
 
-
-    window.location.replace("./home.html");
-  } else {
-    alert("login Failed");
-    return;
-  }
-
-
-});
-
-  if (contactName == "admin" && pin == "admin123") {
-    alert("login Successful");
-
-
-    window.location.replace("./home.html");
-  } else {
-    alert("login Failed");
-    return;
-  }
-
-
+const keyEvent = [inputUsername, inputPassword]
+keyEvent.forEach(key => {
+    key.addEventListener('keyup', (k) => {
+        if (k.key === 'Enter') login(inputUsername, inputPassword)
+    })
 });

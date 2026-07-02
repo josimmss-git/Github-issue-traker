@@ -19,3 +19,16 @@ document.getElementById("login-btn").addEventListener("click", function () {
 
 
 });
+
+  if (contactName == "admin" && pin == "admin123") {
+    alert("login Successful");
+
+
+    window.location.replace("./home.html");
+  } else {
+    alert("login Failed");
+    return;
+  }
+
+
+});
